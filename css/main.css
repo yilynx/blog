@@ -1,4 +1,7 @@
 * {margin: 0; padding: 0;}
+ul {
+    list-style: none;
+}
 
 :root {
     --bg: url('../images/bg.png');
@@ -16,6 +19,8 @@
 
 .main-page {
     position: relative;
+    top: 0;
+    transition: 0.5s linear;
 }
 
 .page {
@@ -23,7 +28,7 @@
     list-style: none;
 }
 
-.first-page,.second-page, .third-page,  .fourth-page{
+.first-page, .second-page, .third-page,  .fourth-page{
     background-color: var(--bgc);
 }
 
@@ -35,10 +40,19 @@
     background: var(--bg) no-repeat center center;
     background-size: cover;
 }
+.first-page-header{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-info-bgc);
+}
 
 .header-info {
+    position: relative;
     height: 30px;
-    background-color: var(--header-info-bgc);
+    z-index: 100;
 }
 .header-info .info-list {
     display: flex;
@@ -54,6 +68,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 10px;
 }
 .header-info .info-list li p {
     margin-left: 5px;
@@ -70,12 +85,29 @@
     height: 100%;
 }
 
-
-.navigation {
-    height: 80px;
-    background-color: var(--navigation-bgc);
+.first-page-header-active{
+    position: fixed;
+    top: 0;
 }
-
+/* --------- */
+.navigation {
+    height: 30px;
+}
+.navigation .navigation-ul{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.navigation .navigation-ul li{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.5s linear;
+}
+.navigation .navigation-ul .active{
+    color: #fff;
+}
+/* -------------- */
 .header {
     position: relative;
     color: var(--header-right-c);
