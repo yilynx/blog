@@ -1,0 +1,84 @@
+.second-page{
+    box-sizing: border-box;
+    position: relative;
+}
+.second-page .daily-log-ul{
+    box-sizing: border-box;
+    padding: 30px 20px 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(65, 64, 64);
+}
+.second-page .daily-log-ul li{
+    margin: 5px 0;
+    padding: 0 5px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(229, 219, 219);
+    display: flex;
+    align-items: center;
+}
+.second-page .daily-log-ul li span:nth-child(2){
+    flex-grow: 1;
+    margin: 0 5px;
+}
+.second-page .daily-log-ul li span:nth-child(3) button{
+    margin: 0 5px;
+    border: 0;
+    padding: 0 3px;
+    cursor: pointer;
+}
+.second-page .daily-log-ul li .operate-btn{
+    display: none;
+}
+.second-page .daily-log-ul li:hover .operate-btn{
+    display: block;
+}
+
+.second-page .append-log{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(199, 190, 190);
+    position: absolute;
+    left: 90%;
+    top: 80%;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.second-page .append-log span{
+    width: inherit;
+    height: inherit;
+    font-size: 32px;
+}
+.second-page .big-append-widget{
+    display: none;
+}
+.second-page .append-widget{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    width: 640px;
+    height: 480px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.second-page .append-widget .close-widget{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 100%;
+    top: 0;
+    transform: translateX(-100%);
+    /* background-color: rgb(214, 45, 45); */
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+}

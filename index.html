@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>yilynx</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/secondPage.css">
 </head>
 <body>
     <div class="container">
@@ -37,8 +38,46 @@
                     </div>
                 </div>
             </li>
-            <li class="page second-page"><h1>second</h1><h1>second</h1><h1>second</h1></li>
+
+            <li class="page second-page">
+                <ul class="daily-log-ul">
+                    <!-- <li>
+                        <span class="record-time">20220711</span>
+                        <span class="detail">吃饭</span>
+                        <span class="operate-btn"><button>编辑</button><button>删除</button></span>
+                    </li>
+                    <li>
+                        <span class="record-time">20220711</span>
+                        <span class="detail">睡觉</span>
+                        <span class="operate-btn"><button>编辑</button><button>删除</button></span>
+                    </li>
+                    <li>
+                        <span class="record-time">20220711</span>
+                        <span class="detail">学习</span>
+                        <span class="operate-btn"><button>编辑</button><button>删除</button></span>
+                    </li> -->
+                </ul>
+
+                <div class="append-log">
+                    <span>+</span>
+                </div>
+
+                <div class="big-append-widget">
+                    <div class="append-widget">
+                        <label for="">时间：<input type="date" class="date"></label>
+                        <label for="">标题：<input type="text" class="title"></label>
+                        <label for="">内容：<textarea name="" id="" cols="30" rows="10"></textarea></label>
+                        <div class="operateBtn">
+                            <button class="appendBtn">添加</button>
+                            <button class="cancelBtn">取消</button>
+                        </div>
+                        <span class="close-widget">×</span>
+                    </div>
+                </div>
+            </li>
+
             <li class="page third-page"><h1>third</h1><h1>third</h1><h1>third</h1></li>
+
             <li class="page fourth-page"><h1>fourth</h1><h1>fourth</h1><h1>fourth</h1></li>
         </ul>
     </div>
@@ -46,5 +85,6 @@
 
     <script src="js/pageRoll.js"></script>
     <script src="js/header-info-date.js"></script>
+    <script src="js/secondPage.js"></script>
 </body>
 </html>
