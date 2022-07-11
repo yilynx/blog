@@ -2,10 +2,24 @@
 // console.log(year, month, day, week, hour, minute);
 let storageInfo = JSON.parse(localStorage.getItem('dailyLog'))
 let createLi, spanRecordTime, spanDetail, spanOperate, btnEdit, btnDelete;
+// import {nanoid} from '../node_modules/nanoid';
+
+let urlAlphabet = "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";
+let nanoid = (size = 21) => {
+  let id = ""
+  // A compact alternative for `for (var i = 0; i < step; i++)`.
+  let i = size
+  while (i--) {
+    // `| 0` is more compact and faster than `Math.floor()`.
+    id += urlAlphabet[(Math.random() * 64) | 0]
+  }
+  return id
+}
 
 const secondPage = document.querySelector('.second-page');
 
 const dailyLogUl = secondPage.querySelector('.daily-log-ul');
+const tempWithouLog = dailyLogUl.querySelector('.without-log');
 
 const appendLog = secondPage.querySelector('.append-log');
 
@@ -44,7 +58,8 @@ function addpendDetailLog(){
     let dailyLog = {
         date: inputDate.value,
         title: inputTitle.value,
-        detail: textarea.value
+        detail: textarea.value,
+        id: nanoid()
     }
     // console.log(dailyLog)
     storageInfo.push(dailyLog);
@@ -55,6 +70,9 @@ function addpendDetailLog(){
 }
 
 function createNewLog(newLog){
+    if(storageInfo){
+        tempWithouLog.style.display = 'none';
+    }
     createLi = document.createElement('li');
 
     spanRecordTime = document.createElement('span')
